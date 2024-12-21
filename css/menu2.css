@@ -1,0 +1,117 @@
+.js.js-nav-active{overflow: hidden}
+.nav-collapse ul {margin: 0; padding: 0; width: 100%; display: block; list-style: none;}
+.nav-collapse li {width: 100%; display: block;}
+.js .nav-collapse {max-height: 0; position: absolute; display: block; overflow: hidden; zoom: 1;}
+.nav-collapse.opened {max-height: 9999px;}
+.nav-toggle {-webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
+.js .nav-collapse {position: relative;}
+
+.nav-toggle {display: none;}
+
+.nav-collapse,
+.nav-collapse * {box-sizing: border-box;}
+.nav-collapse {-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
+.nav-collapse,
+.nav-collapse ul {list-style: none; width: 100%; float: left;}
+
+.nav-collapse li {float: left; width: 100%; margin: 0}
+
+.nav-collapse a {border-bottom: 1px solid rgba(255, 255, 255, 0.15); color: #666666; float: left; padding: 0 20px; text-decoration: none; width: 100%; line-height: 60px}
+
+@media screen and (min-width: 991px) {
+.nav-collapse {width: auto; float: right;}
+.nav-collapse li {width: auto;}
+.nav-collapse a {border-bottom: 0; padding: 1em 1.5em; margin: 0; float: left; text-align: center;color:#000000}
+.nav-collapse li a:hover {color:#0668e2;}
+.nav-collapse:hover a{/*color:#fff;*/}
+.nav-collapse  .sub-menu a{color:#000;font-weight:normal}
+.nav-collapse  .sub-menu a:hover a{color:#000}
+}
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+.nav-toggle {border: 1px solid #fff; color: #fff;  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-touch-callout: none; -webkit-user-select: none;   -moz-user-select: none; -ms-user-select: none; user-select: none; text-decoration: none; position: relative; overflow: hidden; float: right; margin: 18px 0; width: 40px; height: 40px; padding: 0;cursor: pointer;}
+.nav-toggle:hover,
+.nav-toggle:focus,
+.nav-toggle:active {background-color: #fff; color: #34495e;}
+.nav-toggle.active{margin: 0;}
+
+/* ------------------------------------------
+  MULTIPLE LEVELS
+--------------------------------------------- */
+/*.nav-collapse a:hover {background-color: #f1f1f1;}*/
+
+@media screen and (max-width: 991px) {
+.js .nav-collapse {visibility: hidden;}
+.js .nav-collapse.opened {visibility: visible;}
+/*.js .nav-collapse.multiple-level-nav.opened.dropdown-active {max-height: 9999px !important;}*/
+.js .nav-collapse.multiple-level-nav .sub-menu {clip: rect(0 0 0 0); max-height: 0; position: absolute; display: none; overflow: hidden; zoom: 1;padding-top: 0;}
+.js .nav-collapse.multiple-level-nav .sub-menu.toggled {display: block; max-height: 9999px; position: relative;}
+.js .nav-collapse li {position: relative;}
+.js .nav-collapse .dropdown-toggle {border: none; color: #FFFFFF; content: ""; height: 50px; width: 50px; padding: 0; position: absolute; margin: 0; text-transform: lowercase; top: 0; right: 0; background: transparent; cursor: pointer; outline: none}
+/*.js .nav-collapse .dropdown-toggle:hover,
+.js .nav-collapse .dropdown-toggle:focus,
+.js .nav-collapse .dropdown-toggle:active {background-color: #fff; color: #34495e;}*/
+.js .nav-collapse .dropdown-toggle:after {content: "\f107"; font-size: 20px; border: none; width: auto; height: auto; margin: 9px 0 0 0;font-family:FontAwesome;}
+.js .nav-collapse .dropdown-toggle.toggled:after {content: "\f106";}
+}
+.dropdown ul a {background: #FFFFFF; padding-left: 1.5em;line-height:45px; }
+.dropdown ul a:hover{color:#010e2a} 
+.dropdown ul ul a {background: #FFFFFF; padding-left: 2.5em;}
+
+@media screen and (min-width: 991px) {
+.dropdown-toggle {display: none;}
+}
+
+.screen-reader-text {clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden;}
+
+.screen-reader-text:focus {background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-size: 0.875rem;  font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000;  /* Above WP toolbar. */}
+
+.dropdown ul ul {border: 0; padding: 0;}
+.dropdown .dropdown.opened .has-dropdown {background: #9c2c12;}
+
+@media screen and (min-width: 991px) {
+.nav-collapse {position: relative;}
+.js .nav-collapse,
+.js .nav-collapse .dropdown ul {max-height: none; overflow: visible; }
+.has-dropdown:after {font-size: 1.5em; line-height: 0.8; float: right; content: ""; width: 0; height: 0; margin: 1.1em 0 0 0.5em; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #666666;}
+.dropdown ul .has-dropdown:after {content: ""; width: 0; height: 0; margin: 20px 0 0; border-bottom: 5px solid transparent; border-top: 5px solid transparent; border-left: 5px solid #666666; }
+.nav-collapse .dropdown {position: relative;}
+.nav-collapse .dropdown li {width: 100%;}
+.nav-collapse .dropdown ul a {text-align: left; border: 0;}
+.nav-collapse li {border: 0; display: inline-block; height: 60px; line-height: 60px; position: relative;}
+.nav-collapse a {display: inline-block; padding: 0 24px;text-transform:capitalize;font-weight:600; font-size: 16px;}
+.nav-collapse a.menu-active { color: #0668e2; }
+
+.nav-collapse:last-child{padding-right:0}
+.nav-collapse ul ul {float: left; margin: 0; position: absolute; top: 85px; left: -999em; z-index: 99999; text-align: center;}
+.nav-collapse li li {border: 0; display: block; height: auto; line-height: 1.0909090909;}
+.nav-collapse ul ul ul {left: -999em; top: 20px;}
+.nav-collapse ul ul a {padding: 0 12px; white-space: normal;  width: 225px; border-bottom: 1px solid #e0e0e0 !important}
+.nav-collapse ul li:hover > ul,
+.nav-collapse ul li.focus > ul {top:60px; left: 0; margin-left: 0;}
+.nav-collapse ul ul li:hover > ul,
+.nav-collapse ul ul li.focus > ul {top: 0; left: 0%; margin-left: 250px; }
+}
+
+.js .nav-collapse{float: left; position: relative !important}
+
+@media screen and (max-width: 991px) {
+.nav-toggle {display: block; background: #fff; outline: none}
+.js .nav-collapse {right: 0; width: 270px; top: 0; height: 100vh; overflow: auto; z-index: 10; max-height: 100vh !important;}
+.js .nav-collapse {position: absolute !important;}
+
+.js .nav-collapse.closed {height: 100%; transition: all .2s ease-in-out !important; z-index: 1000; float: right; background: #333333; margin-right: -300px; overflow-y: auto; position: fixed !important; right: 0; top: 78px; margin-top: 0; display: none} 
+.js .nav-collapse.opened{position: absolute !important; transition: all 0.4s ease 0s !important; width: 100%; overflow: auto; background: #333333; display: block}
+
+.nav-collapse a{color: #FFFFFF}
+.nav-collapse a:hover{color: #fff}
+.dropdown ul a{background: #ffffff; color: #000000; border-bottom: 1px solid #e0e0e0 !important}
+
+.dropdown ul ul a{background: #010e2a;}
+
+.nav-collapse ul{padding-top: 50px; background: #0668e2;}
+
+.navbar{margin-top:-26px !important}
+
+}
